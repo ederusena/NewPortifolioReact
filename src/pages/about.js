@@ -5,6 +5,10 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import ProfilePic from "../../public/images/profile/eder.png";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
+import Skills from "@/components/Skills";
+import Experience from './../components/Experience';
+import Education from './../components/Education';
+import PropTypes from 'prop-types';
 
 const AnimetedNumbers = ({ values }) => {
   const ref = useRef(null);
@@ -29,6 +33,10 @@ const AnimetedNumbers = ({ values }) => {
   return <span ref={ref}>{values}</span>;
 };
 
+AnimetedNumbers.propTypes = {
+  values: PropTypes.string.isRequired,
+};
+
 const About = () => {
   return (
     <>
@@ -37,14 +45,14 @@ const About = () => {
         <meta name="description" content="Página Sobre do portifólio" />
       </Head>
 
-      <main className="flex w-full flex-col items-center justify-center">
+      <main className="flex flex-col items-center justify-center w-full">
         <Layout className="pt-16">
           <AnimatedText
             text="Be water, my friend!"
             className="mb-16 text-7xl"
           />
           <div className="grid w-full grid-cols-8 gap-16">
-            <div className="col-span-3 flex flex-col items-start justify-start">
+            <div className="flex flex-col items-start justify-start col-span-3">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
                 Biografia
               </h2>
@@ -70,20 +78,20 @@ const About = () => {
               </p>
             </div>
 
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8">
+            <div className="relative col-span-3 p-8 border-2 border-solid h-max rounded-2xl border-dark bg-light">
               <div className="absolute top-4 -right-4 -z-10 w-[102%] h-[100%] rounded-[1rem] bg-dark" />
               <div className="p-8 bg-dark rounded-xl">
                 <Image
                   src={ProfilePic}
                   alt="logo"
-                  className="w-full h-auto rounded-2xl p-4"
+                  className="w-full h-auto p-4 rounded-2xl"
                 />
               </div>
             </div>
 
-            <div className="col-span-2 flex flex-col items-end justify-between">
+            <div className="flex flex-col items-end justify-between col-span-2">
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+                <span className="inline-block font-bold text-7xl">
                   <AnimetedNumbers values={50} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
@@ -92,7 +100,7 @@ const About = () => {
               </div>
 
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+                <span className="inline-block font-bold text-7xl">
                   <AnimetedNumbers values={40} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
@@ -101,7 +109,7 @@ const About = () => {
               </div>
 
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">
+                <span className="inline-block font-bold text-7xl">
                   <AnimetedNumbers values={4} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
@@ -110,6 +118,9 @@ const About = () => {
               </div>
             </div>
           </div>
+          <Skills />
+          <Experience />
+          <Education />
         </Layout>
       </main>
     </>
