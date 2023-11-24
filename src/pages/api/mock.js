@@ -120,7 +120,7 @@ const mockData = {
       place: 'Coursera And EdX',
       info: 'Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine Learning Engineering.',
     },
-  ],
+  ]
 };
 
 export default (req, res) => {
