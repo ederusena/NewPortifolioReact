@@ -1,11 +1,12 @@
 import AnimatedText from '@/components/AnimatedText';
+import { GithubIcon } from '@/components/Icons';
 import Layout from '@/components/Layout';
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import { GithubIcon } from '@/components/Icons';
 import {
   agencyImgProject,
   cryptoImgProject,
@@ -14,6 +15,8 @@ import {
   nftImgProject,
   portfolioImgProject,
 } from '@public/images/projects';
+
+const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -24,7 +27,13 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         href={link}
         target='_blank'
       >
-        <Image src={img} alt={title} className='w-full h-auto rounded-2xl' />
+        <FramerImage
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.5 }}
+          src={img}
+          alt={title}
+          className='w-full h-auto rounded-2xl'
+        />
       </Link>
 
       <div className='flex flex-col items-start justify-between w-1/2 pl-6'>
@@ -64,7 +73,9 @@ const Project = ({ title, type, img, link, github }) => {
         href={link}
         target='_blank'
       >
-        <Image
+        <FramerImage
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.5 }}
           src={img}
           alt={title}
           className='w-full h-auto mb-4 rounded-2xl'
