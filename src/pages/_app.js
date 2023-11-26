@@ -1,14 +1,14 @@
-import "@/styles/globals.css";
-import { Montserrat } from "next/font/google";
-import Head from "next/head";
+import '@/styles/globals.css'
+import { Montserrat } from 'next/font/google'
+import Head from 'next/head'
 
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
 
 const montSerrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-mont",
-});
+  subsets: ['latin'],
+  variable: '--font-mont',
+})
 
 export default function App({ Component, pageProps }) {
   return (
@@ -21,11 +21,11 @@ export default function App({ Component, pageProps }) {
       <NavBar />
 
       <main
-        className={`${montSerrat.variable} font-mont bg-light w-full min-h-screen`}
+        className={`${montSerrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
       >
         <Component {...pageProps} />
       </main>
       <Footer />
     </>
-  );
+  )
 }

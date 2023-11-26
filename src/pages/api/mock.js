@@ -120,16 +120,18 @@ const mockData = {
       place: 'Coursera And EdX',
       info: 'Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine Learning Engineering.',
     },
-  ]
-};
+  ],
+}
 
-export default (req, res) => {
-  const { type } = req.query;
+const mock = (req, res) => {
+  const { type } = req.query
 
   if (!type || !mockData[type]) {
-    return res.status(400).json({ error: 'Invalid data type specified' });
+    return res.status(400).json({ error: 'Invalid data type specified' })
   }
 
-  const selectedData = mockData[type];
-  res.status(200).json(selectedData);
-};
+  const selectedData = mockData[type]
+  res.status(200).json(selectedData)
+}
+
+export default mock

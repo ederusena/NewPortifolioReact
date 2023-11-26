@@ -1,18 +1,23 @@
-import React from "react";
-import { CircularText } from "./Icons";
-import Link from "next/link";
+import React from 'react'
+import { CircularText } from './Icons'
+import Link from 'next/link'
 
 const HireMe = () => {
   return (
-    <div className="fixed left-4 bottom-4 flex items-center justify-center overflow-hidden">
-      <div className="w-48 h-auto flex items-center justify-center relative">
-        <CircularText className={"fill-dark animate-spin-slow"} />
-        <Link 
-        className="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border border-solid border-dark w-20 h-20 rounded-full font-semibold hover:bg-light hover:text-dark"
-        href="mailto:eder.sena@live.com">Hire me</Link>
+    <div className="fixed flex items-center justify-center overflow-hidden left-4 bottom-4">
+      <div className="relative flex items-center justify-center w-48 h-auto">
+        <CircularText
+          className={'fill-dark dark:fill-light animate-spin-slow'}
+        />
+        <Link
+          className="absolute flex items-center justify-center w-20 h-20 font-semibold -translate-x-1/2 -translate-y-1/2 border border-solid rounded-full shadow-md left-1/2 top-1/2 bg-dark dark:bg-light text-light dark:text-dark border-dark dark:border-light hover:bg-light hover:text-dark dark:hover:bg-dark dark:hover:text-light"
+          href="mailto:eder.sena@live.com"
+        >
+          Hire me
+        </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HireMe;
+export default HireMe
