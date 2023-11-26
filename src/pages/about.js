@@ -10,7 +10,7 @@ import Experience from './../components/Experience'
 import Education from './../components/Education'
 import PropTypes from 'prop-types'
 
-const AnimetedNumbers = ({ values }) => {
+const AnimatedNumbers = ({ values }) => {
   const ref = useRef(null)
   const motionValue = useMotionValue(0)
   const springValue = useSpring(motionValue, { stiffness: 100, damping: 50 })
@@ -37,8 +37,8 @@ const AnimetedNumbers = ({ values }) => {
   )
 }
 
-AnimetedNumbers.propTypes = {
-  values: PropTypes.string.isRequired,
+AnimatedNumbers.propTypes = {
+  values: PropTypes.number,
 }
 
 const About = () => {
@@ -96,7 +96,7 @@ const About = () => {
             <div className="flex flex-col items-end justify-between col-span-2">
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block font-bold text-7xl">
-                  <AnimetedNumbers values={50} />
+                  <AnimatedNumbers values={50} />
                   <span className="text-dark dark:text-light">+</span>
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
@@ -106,7 +106,7 @@ const About = () => {
 
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block font-bold text-7xl">
-                  <AnimetedNumbers values={40} />
+                  <AnimatedNumbers values={40} />
                   <span className="text-dark dark:text-light">+</span>
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
@@ -116,7 +116,7 @@ const About = () => {
 
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block font-bold text-7xl">
-                  <AnimetedNumbers values={4} />
+                  <AnimatedNumbers values={4} />
                   <span className="text-dark dark:text-light">+</span>
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">

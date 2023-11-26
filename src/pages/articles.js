@@ -43,7 +43,7 @@ const MovingImg = ({ img, title, link }) => {
       onMouseMove={handleMouse}
       onMouseLeave={handleMouseLeave}
     >
-      <h2 className="text-xl font-semibold capitalize hover:underline">
+      <h2 className="text-xl font-semibold capitalize hover:underline dark:text-light">
         {title}
       </h2>
       <FramerImage
@@ -61,7 +61,7 @@ const MovingImg = ({ img, title, link }) => {
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="relative w-full col-span-1 p-4 border border-solid bg-light border-dark rounded-2xl">
+    <li className="relative w-full col-span-1 p-4 border border-solid bg-light border-dark dark:bg-dark dark:border-light rounded-2xl dark:text-light">
       <div className="absolute top-0 -right-3 shadow-xl -z-10 w-[101%] h-[102%] rounded-[2.4rem] bg-dark rounded-br-2xl" />
       <Link
         className="inline-block w-full overflow-hidden rounded-lg cursor-pointer"
@@ -84,7 +84,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
       </Link>
 
       <p className="mb-2 text-sm">{summary}</p>
-      <span className="font-semibold text-primary">{time}</span>
+      <span className="font-semibold text-primary dark:text-primaryDark">{time}</span>
     </li>
   )
 }
@@ -95,10 +95,10 @@ const Article = ({ img, title, date, link }) => {
       initial={{ y: 200 }}
       viewport={{ once: true }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
-      className="relative flex items-center justify-between w-full p-4 py-6 my-4 border border-b-4 border-r-4 border-solid rounded-xl bg-light text-dark first:mt-0 border-dark"
+      className="relative flex items-center justify-between w-full p-4 py-6 my-4 border border-b-4 border-r-4 border-solid rounded-xl bg-light dark:bg-dark text-dark dark:text-light first:mt-0 border-dark dark:border-light"
     >
       <MovingImg img={img} title={title} link={link} />
-      <span className="pl-4 font-semibold text-primary">{date}</span>
+      <span className="pl-4 font-semibold text-primary dark:text-primaryDark">{date}</span>
     </motion.li>
   )
 }
@@ -111,7 +111,7 @@ const articles = () => {
         <meta name="description" content="Página Sobre do portifólio" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full mb-16 overflow-hidden">
+      <main className="flex flex-col items-center justify-center w-full mb-16 overflow-hidden dark:text-light ">
         <Layout className="pt-16">
           <AnimatedText
             text="Palavras podem mudar o mundo!"
@@ -188,7 +188,7 @@ Improve the user experience."
 }
 
 FeaturedArticle.propTypes = {
-  img: PropTypes.string,
+  img: PropTypes.object,
   title: PropTypes.string,
   time: PropTypes.string,
   summary: PropTypes.string,
@@ -196,13 +196,13 @@ FeaturedArticle.propTypes = {
 }
 
 MovingImg.propTypes = {
-  img: PropTypes.string,
+  img: PropTypes.object,
   title: PropTypes.string,
   link: PropTypes.string,
 }
 
 Article.propTypes = {
-  img: PropTypes.string,
+  img: PropTypes.object,
   title: PropTypes.string,
   date: PropTypes.string,
   link: PropTypes.string,

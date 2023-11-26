@@ -12,6 +12,8 @@ const UserThemeSwitcher = () => {
     document.documentElement.classList.remove(className)
   }
 
+ 
+
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery)
     const userPref = window.localStorage.getItem('theme')
@@ -37,12 +39,10 @@ const UserThemeSwitcher = () => {
   useEffect(() => {
     if (mode === 'dark') {
       window.localStorage.setItem('theme', 'dark')
-      document.documentElement.classList.remove('light')
       document.documentElement.classList.add('dark')
-    } else {
+    } else if (mode === 'light') {
       window.localStorage.setItem('theme', 'light')
       document.documentElement.classList.remove('dark')
-      document.documentElement.classList.add('light')
     }
   }, [mode])
 

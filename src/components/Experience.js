@@ -17,20 +17,20 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 1.5, type: 'spring' }}
       >
-        <h3 className="text-2xl font-bold capitalize">
+        <h3 className="text-2xl font-bold capitalize dark:text-light">
           {position}&nbsp;
           <a
             target="_blank"
-            className="capitalize text-primary"
+            className="capitalize text-primary dark:text-emerald-500"
             href={companyLink}
           >
             @{company}
           </a>
         </h3>
-        <span className="font-medium capitalize text-dark/75">
+        <span className="font-medium capitalize text-dark/75 dark:text-light">
           {time} | {address}
         </span>
-        <p className="w-full font-medium">{work}</p>
+        <p className="w-full font-medium dark:text-light">{work}</p>
       </motion.div>
     </li>
   )
@@ -69,13 +69,13 @@ const Experience = () => {
 
   return (
     <div className="my-64">
-      <h2 className="w-full mb-32 font-bold text-center text-8xl">
+      <h2 className="w-full mb-32 font-bold text-center text-8xl dark:text-light">
         Experiência
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scale: scrollYProgress }}
-          className="absolute top-0 left-[54px] w-[4px] h-full bg-dark origin-top"
+          className="absolute top-0 left-[54px] w-[4px] h-full bg-dark dark:bg-light origin-top"
         />
         <ul className="flex flex-col items-start justify-between w-full ml-4">
           {experiences.map((item) => (

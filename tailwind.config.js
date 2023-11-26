@@ -20,7 +20,7 @@ module.exports = {
         darkNav: '#121212',
         light: '#f5f5f5',
         primary: '#B63E96', // 240,86,199
-        primaryDark: '#58E6D9', // 80,230,217
+        primaryDark: '#22c55e', // 80,230,217
       },
       backgroundImage: {
         circularLight:
