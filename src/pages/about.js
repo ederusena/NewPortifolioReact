@@ -53,10 +53,10 @@ const About = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Be water, my friend!"
-            className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4x sm:mb-8"
+            className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
-          <div className="grid w-full grid-cols-8 gap-16">
-            <div className="flex flex-col items-start justify-start col-span-3">
+          <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
+            <div className="flex flex-col items-start justify-start col-span-3 md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 Biografia
               </h2>
@@ -82,46 +82,47 @@ const About = () => {
               </p>
             </div>
 
-            <div className="relative col-span-3 p-8 border-2 border-solid h-max rounded-2xl border-dark dark:border-light bg-light dark:bg-dark">
+            <div className="relative col-span-3 p-8 border-2 border-solid h-max rounded-2xl border-dark dark:border-light bg-light dark:bg-dark md:order-1 md:col-span-8">
+
               <div className="absolute top-4 -right-4 -z-10 w-[102%] h-[100%] rounded-[1rem] bg-dark dark:bg-light" />
-              <div className="p-8 bg-dark dark:bg-light rounded-xl">
+              {/* <div className="p-8 bg-dark dark:bg-light rounded-xl md:col-span-8"> */}
                 <Image
                   src={ProfilePic}
                   alt="logo"
                   className="w-full h-auto p-4 rounded-2xl"
                   priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                 />
-              </div>
+              {/* </div> */}
             </div>
 
-            <div className="flex flex-col items-end justify-between col-span-2">
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block font-bold text-7xl">
+            <div className="flex flex-col items-end justify-between col-span-2 xl:col-span-8 xl:flex-row xl:items-center md:order-3">
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block font-bold text-7xl md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers values={50} />
                   <span className="text-dark dark:text-light">+</span>
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Clientes satisfeitos
                 </h2>
               </div>
 
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block font-bold text-7xl">
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block font-bold text-7xl md:text-6xl sm:text-5xl xm:text-4xl">
                   <AnimatedNumbers values={40} />
                   <span className="text-dark dark:text-light">+</span>
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Projetos concluidos
                 </h2>
               </div>
 
-              <div className="flex flex-col items-end justify-center">
-                <span className="inline-block font-bold text-7xl">
+              <div className="flex flex-col items-end justify-center xl:items-center">
+                <span className="inline-block font-bold text-7xl md:text-6xl sm:text-5xl xm:text-4xl">
                   <AnimatedNumbers values={4} />
                   <span className="text-dark dark:text-light">+</span>
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Anos de experiencia
                 </h2>
               </div>
