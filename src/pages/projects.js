@@ -33,6 +33,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           src={img}
           alt={title}
           className="w-full h-auto rounded-2xl"
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </Link>
 
@@ -81,6 +83,8 @@ const Project = ({ title, type, img, link, github }) => {
           src={img}
           alt={title}
           className="w-full h-auto mb-4 rounded-2xl"
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </Link>
 

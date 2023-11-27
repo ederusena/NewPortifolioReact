@@ -54,6 +54,8 @@ const MovingImg = ({ img, title, link }) => {
         src={img}
         alt={title}
         className="absolute z-10 hidden h-auto w-96 rounded-2xl"
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
       />
     </Link>
   )
@@ -74,6 +76,8 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
           src={img}
           alt={title}
           className="w-full h-auto rounded-2xl"
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </Link>
 
@@ -84,7 +88,9 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
       </Link>
 
       <p className="mb-2 text-sm">{summary}</p>
-      <span className="font-semibold text-primary dark:text-primaryDark">{time}</span>
+      <span className="font-semibold text-primary dark:text-primaryDark">
+        {time}
+      </span>
     </li>
   )
 }
@@ -98,7 +104,9 @@ const Article = ({ img, title, date, link }) => {
       className="relative flex items-center justify-between w-full p-4 py-6 my-4 border border-b-4 border-r-4 border-solid rounded-xl bg-light dark:bg-dark text-dark dark:text-light first:mt-0 border-dark dark:border-light"
     >
       <MovingImg img={img} title={title} link={link} />
-      <span className="pl-4 font-semibold text-primary dark:text-primaryDark">{date}</span>
+      <span className="pl-4 font-semibold text-primary dark:text-primaryDark">
+        {date}
+      </span>
     </motion.li>
   )
 }
