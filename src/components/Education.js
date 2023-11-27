@@ -9,7 +9,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justity-between"
+      className="my-8 first:mt-0 last:mb-0 w-[60%] md:w-[80%] mx-auto flex flex-col items-center justity-between"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -17,13 +17,13 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 1.5, type: 'spring' }}
       >
-        <h3 className="text-2xl font-bold capitalize dark:text-light">
+        <h3 className="text-2xl font-bold capitalize dark:text-light sm:text-xl xs:text-lg">
           {type}
         </h3>
-        <span className="font-medium capitalize text-dark/75 dark:text-light">
+        <span className="font-medium capitalize text-dark/75 dark:text-light xs:text-sm">
           {time} | {place}
         </span>
-        <p className="w-full font-medium dark:text-light">{info}</p>
+        <p className="w-full font-medium dark:text-light md:text-sm">{info}</p>
       </motion.div>
     </li>
   )
@@ -60,15 +60,15 @@ const Education = () => {
 
   return (
     <div className="my-64">
-      <h2 className="w-full mb-32 font-bold text-center text-8xl dark:text-light lg:!text-7xl sm:!text-6xl xs:!text-4xl">
+      <h2 className="w-full mb-32 font-bold text-center text-8xl dark:text-light md:text-6xl xs:text-4xl md:mb-16">
         Educação
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scale: scrollYProgress }}
-          className="absolute top-0 left-[54px] w-[4px] h-full bg-dark dark:bg-light origin-top"
+          className="absolute top-0 left-[54px] w-[4px] h-full bg-dark dark:bg-light origin-top md:w-[2px] md:left-[45px] xs:left-[30px]"
         />
-        <ul className="flex flex-col items-start justify-between w-full ml-4">
+        <ul className="flex flex-col items-start justify-between w-full gap-2 ml-4">
           {educations.map((item) => (
             <Details key={item.id} {...item} />
           ))}
