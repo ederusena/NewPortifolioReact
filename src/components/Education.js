@@ -63,12 +63,12 @@ const Education = () => {
       <h2 className="w-full mb-32 font-bold text-center text-8xl dark:text-light md:text-6xl xs:text-4xl md:mb-16">
         Educação
       </h2>
-      <div ref={ref} className="w-[75%] mx-auto relative">
+      <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
         <motion.div
           style={{ scale: scrollYProgress }}
           className="absolute top-0 left-[54px] w-[4px] h-full bg-dark dark:bg-light origin-top md:w-[2px] md:left-[45px] xs:left-[30px]"
         />
-        <ul className="flex flex-col items-start justify-between w-full gap-2 ml-4">
+        <ul className="flex flex-col items-start justify-between w-full gap-2 ml-4 xs:ml-8">
           {educations.map((item) => (
             <Details key={item.id} {...item} />
           ))}
