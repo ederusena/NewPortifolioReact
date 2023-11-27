@@ -4,12 +4,12 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className="w-full text-lg font-medium border-t-2 border-solid border-dark dark:border-light ">
-      <Layout className="flex items-center justify-between py-8 dark:text-light">
+    <footer className="w-full text-lg font-medium border-t-2 border-solid border-dark dark:border-light sm:text-base">
+      <Layout className="flex items-center justify-between py-8 dark:text-light lg:flex-col lg:py-6">
         <span>
           {new Date().getFullYear()} &copy; Todos direitos reservados.
         </span>
-        <div className="flex items-center">
+        <div className="flex items-center lg:py-2">
           Construido com
           <span className="text-primary dark:text-primaryDark text-2x;l px-1">
             &#9825;
