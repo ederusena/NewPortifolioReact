@@ -79,7 +79,7 @@ const NavBar = () => {
   }
 
   return (
-    <header className="relative flex items-center justify-between w-full px-32 py-8 font-medium lg:py-10 dark:text-light dark:bg-darkNav">
+    <header className="relative flex items-center justify-between w-full px-32 py-8 font-medium lg:py-10 dark:text-light dark:bg-darkNav lg:px-16 md:px-12 sm:px-8">
       <button
         className="flex-col items-center justify-center hidden lg:flex"
         onClick={handleOpenModel}

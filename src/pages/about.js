@@ -53,7 +53,7 @@ const About = () => {
         <Layout className="pt-16">
           <AnimatedText
             text="Be water, my friend!"
-            className="mb-16 text-7xl"
+            className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4x sm:mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="flex flex-col items-start justify-start col-span-3">
