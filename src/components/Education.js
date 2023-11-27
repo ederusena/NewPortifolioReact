@@ -60,7 +60,7 @@ const Education = () => {
 
   return (
     <div className="my-64">
-      <h2 className="w-full mb-32 font-bold text-center text-8xl dark:text-light">
+      <h2 className="w-full mb-32 font-bold text-center text-8xl dark:text-light lg:!text-7xl sm:!text-6xl xs:!text-4xl">
         Educação
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative">

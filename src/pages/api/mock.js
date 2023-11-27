@@ -54,38 +54,38 @@ const mockData = {
     },
     {
       name: 'Vue',
-      x: '-4vw',
+      x: '-7vw',
       y: '0',
     },
     {
       name: 'React',
-      x: '4vw',
+      x: '7vw',
       y: '0',
     },
     {
       name: 'Html',
       x: '0',
-      y: '10vw',
+      y: '14vw',
     },
     {
       name: 'Javascript',
-      x: '-16vw',
+      x: '-24vw',
       y: '-1vw',
     },
     {
       name: 'Typescript',
-      x: '16vw',
+      x: '24vw',
       y: '0vw',
     },
     {
       name: 'Dotnet',
-      x: '13vw',
-      y: '7vw',
+      x: '15vw',
+      y: '9vw',
     },
     {
       name: 'SpringBoot',
-      x: '-13vw',
-      y: '7vw',
+      x: '-15vw',
+      y: '9vw',
     },
     {
       name: 'Java',
