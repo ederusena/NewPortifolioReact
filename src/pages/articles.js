@@ -1,3 +1,4 @@
+import TransitionEffect from './../components/TransitionEffect';
 import AnimatedText from '@/components/AnimatedText'
 import Layout from '@/components/Layout'
 import Head from 'next/head'
@@ -118,7 +119,7 @@ const articles = () => {
         <title>Eder Sena | Artigos </title>
         <meta name="description" content="Página Sobre do portifólio" />
       </Head>
-
+      <TransitionEffect />
       <main className="flex flex-col items-center justify-center w-full mb-16 overflow-hidden dark:text-light ">
         <Layout className="pt-16">
           <AnimatedText

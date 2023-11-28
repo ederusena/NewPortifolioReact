@@ -1,14 +1,15 @@
-import React, { useRef, useEffect } from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
-import AnimatedText from '@/components/AnimatedText'
-import Layout from '@/components/Layout'
-import ProfilePic from '../../public/images/profile/eder.png'
-import { useInView, useMotionValue, useSpring } from 'framer-motion'
+import TransitionEffect from './../components/TransitionEffect';
 import Skills from '@/components/Skills'
+import React, { useRef, useEffect } from 'react'
+import PropTypes from 'prop-types'
+import ProfilePic from '../../public/images/profile/eder.png'
+import Layout from '@/components/Layout'
+import Image from 'next/image'
+import Head from 'next/head'
 import Experience from './../components/Experience'
 import Education from './../components/Education'
-import PropTypes from 'prop-types'
+import AnimatedText from '@/components/AnimatedText'
+import { useInView, useMotionValue, useSpring } from 'framer-motion'
 
 const AnimatedNumbers = ({ values }) => {
   const ref = useRef(null)
@@ -48,7 +49,7 @@ const About = () => {
         <title>Eder Sena | Página Sobre</title>
         <meta name="description" content="Página Sobre do portifólio" />
       </Head>
-
+      <TransitionEffect />
       <main className="flex flex-col items-center justify-center w-full">
         <Layout className="pt-16">
           <AnimatedText

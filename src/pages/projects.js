@@ -1,3 +1,4 @@
+import TransitionEffect from './../components/TransitionEffect';
 import AnimatedText from '@/components/AnimatedText'
 import { GithubIcon } from '@/components/Icons'
 import Layout from '@/components/Layout'
@@ -128,7 +129,7 @@ const Projects = () => {
         <title>Eder Sena | Projetos</title>
         <meta name="description" content="Página Sobre do portifólio" />
       </Head>
-
+      <TransitionEffect />
       <main className="flex flex-col items-center justify-center w-full mb-16 dark:text-light">
         <Layout className="pt-16">
           <AnimatedText text="Projetos" className="mb-16 text-7xl lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl" />
