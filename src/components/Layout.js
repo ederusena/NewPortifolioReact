@@ -10,7 +10,7 @@ function Layout({children, className=""}) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.array,
   className: PropTypes.string,
 }
 
