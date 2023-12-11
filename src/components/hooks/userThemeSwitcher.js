@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const UserThemeSwitcher = () => {
   const preferDarkQuery = '(prefer-color-scheme: dark)'
@@ -12,21 +12,19 @@ const UserThemeSwitcher = () => {
     document.documentElement.classList.remove(className)
   }
 
- 
-
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery)
     const userPref = window.localStorage.getItem('theme')
 
     const handleChange = () => {
       if (userPref) {
-        let check = userPref === 'dark' ? 'dark' : 'light'
+        const check = userPref === 'dark' ? 'dark' : 'light'
 
         setMode(check)
 
         check === 'dark' ? addClass('dark') : removeClass('dark')
       } else {
-        let check = mediaQuery.matches ? 'dark' : 'light'
+        const check = mediaQuery.matches ? 'dark' : 'light'
 
         setMode(check)
         check === 'dark' ? addClass('dark') : removeClass('dark')

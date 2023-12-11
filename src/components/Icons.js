@@ -6,6 +6,7 @@ export const GithubIcon = ({ className, ...rest }) => (
     width="1em"
     height="1em"
     viewBox="0 0 512 512"
+    role
     {...rest}
     className={`w-full h-auto ${className}`}
   >
@@ -19,6 +20,7 @@ export const GithubIcon = ({ className, ...rest }) => (
 
 export const TwitterIcon = ({ className, ...rest }) => (
   <svg
+    role
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
@@ -36,6 +38,7 @@ export const TwitterIcon = ({ className, ...rest }) => (
 // #0A66C2
 export const LinkedInIcon = ({ className, ...rest }) => (
   <svg
+    role
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
@@ -57,6 +60,7 @@ export const LinkedInIcon = ({ className, ...rest }) => (
 
 export const PinterestIcon = ({ className, ...rest }) => (
   <svg
+    role
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
@@ -74,6 +78,7 @@ export const PinterestIcon = ({ className, ...rest }) => (
 
 export const DribbbleIcon = ({ className, ...rest }) => (
   <svg
+    role
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
@@ -95,6 +100,7 @@ export const DribbbleIcon = ({ className, ...rest }) => (
 
 export const SunIcon = ({ className, ...rest }) => (
   <svg
+    role
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -273,6 +279,7 @@ export const SunIcon = ({ className, ...rest }) => (
 
 export const MoonIcon = ({ className, ...rest }) => (
   <svg
+    role
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -429,6 +436,7 @@ export const MoonIcon = ({ className, ...rest }) => (
 
 export const CircularText = ({ className, ...rest }) => (
   <svg
+    role
     xmlns="http://www.w3.org/2000/svg"
     width={666.667}
     height={666.667}
@@ -443,6 +451,7 @@ export const CircularText = ({ className, ...rest }) => (
 
 export const LinkArrow = ({ className, ...rest }) => (
   <svg
+    role
     xmlns="http://www.w3.org/2000/svg"
     width={24}
     height={24}

@@ -1,15 +1,15 @@
-import TransitionEffect from './../components/TransitionEffect';
-import Skills from '@/components/Skills'
-import React, { useRef, useEffect } from 'react'
-import PropTypes from 'prop-types'
-import ProfilePic from '../../public/images/profile/eder.png'
-import Layout from '@/components/Layout'
-import Image from 'next/image'
-import Head from 'next/head'
-import Experience from './../components/Experience'
-import Education from './../components/Education'
 import AnimatedText from '@/components/AnimatedText'
+import Layout from '@/components/Layout'
+import Skills from '@/components/Skills'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
+import Head from 'next/head'
+import Image from 'next/image'
+import PropTypes from 'prop-types'
+import React, { useEffect, useRef } from 'react'
+import ProfilePic from '../../public/images/profile/eder.png'
+import Education from './../components/Education'
+import Experience from './../components/Experience'
+import TransitionEffect from './../components/TransitionEffect'
 
 const AnimatedNumbers = ({ values }) => {
   const ref = useRef(null)
@@ -84,16 +84,15 @@ const About = () => {
             </div>
 
             <div className="relative col-span-3 p-8 border-2 border-solid h-max rounded-2xl border-dark dark:border-light bg-light dark:bg-dark md:order-1 md:col-span-8">
-
               <div className="absolute top-4 -right-4 -z-10 w-[102%] h-[100%] rounded-[1rem] bg-dark dark:bg-light" />
               {/* <div className="p-8 bg-dark dark:bg-light rounded-xl md:col-span-8"> */}
-                <Image
-                  src={ProfilePic}
-                  alt="logo"
-                  className="w-full h-auto p-4 rounded-2xl"
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                />
+              <Image
+                src={ProfilePic}
+                alt="logo"
+                className="w-full h-auto p-4 rounded-2xl"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+              />
               {/* </div> */}
             </div>
 

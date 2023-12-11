@@ -1,12 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import React from 'react'
 
 const MotionLink = motion(Link)
 
 const Logo = () => {
-  var colors = [1, 2, 3, 4]
-
   return (
     <div className="flex items-center justify-center mt-2">
       <MotionLink

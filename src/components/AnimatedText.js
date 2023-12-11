@@ -1,6 +1,6 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 const quote = {
   initial: {
@@ -40,7 +40,7 @@ const AnimatedText = ({ text, className = '' }) => {
       >
         {text.split(' ').map((word, index) => (
           <motion.span
-            key={word + '-' + index}
+            key={`${word} - ${index}`}
             className="inline-block"
             variants={singleWord}
           >

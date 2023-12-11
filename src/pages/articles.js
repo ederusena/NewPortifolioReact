@@ -1,22 +1,22 @@
-import TransitionEffect from './../components/TransitionEffect';
 import AnimatedText from '@/components/AnimatedText'
 import Layout from '@/components/Layout'
+import { motion, useMotionValue } from 'framer-motion'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import Image from 'next/image'
-import { motion, useMotionValue } from 'framer-motion'
 import React, { useRef } from 'react'
+import TransitionEffect from './../components/TransitionEffect'
 
 import {
+  formValidationImgArticle,
+  higherOrderImgArticle,
   loadingScreenImgArticle,
   modalImgArticle,
-  formValidationImgArticle,
   paginationImgArticle,
+  reduxImgArticle,
   smoothScrollImgArticle,
   todolistImgArticle,
-  higherOrderImgArticle,
-  reduxImgArticle,
 } from '@public/images/articles'
 
 const FramerImage = motion(Image)

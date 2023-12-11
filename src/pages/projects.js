@@ -1,13 +1,6 @@
-import TransitionEffect from './../components/TransitionEffect';
 import AnimatedText from '@/components/AnimatedText'
 import { GithubIcon } from '@/components/Icons'
 import Layout from '@/components/Layout'
-import { motion } from 'framer-motion'
-import PropTypes from 'prop-types'
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-import React from 'react'
 import {
   agencyImgProject,
   cryptoImgProject,
@@ -16,13 +9,19 @@ import {
   nftImgProject,
   portfolioImgProject,
 } from '@public/images/projects'
+import { motion } from 'framer-motion'
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import PropTypes from 'prop-types'
+import React from 'react'
+import TransitionEffect from './../components/TransitionEffect'
 
 const FramerImage = motion(Image)
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="relative flex items-center justify-between w-full p-12 border border-solid shadow-2xl rounded-br-2xl rounded-3xl border-dark bg-light dark:bg-dark dark:boder-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
-    >
+    <article className="relative flex items-center justify-between w-full p-12 border border-solid shadow-2xl rounded-br-2xl rounded-3xl border-dark bg-light dark:bg-dark dark:boder-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
       <div className="absolute shadow-xl top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl xs:-right-2 xs:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
       <Link
         className="w-1/2 overflow-hidden rounded-lg cursor-pointer dark:text-light lg:w-full"
@@ -49,7 +48,9 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           target="_blank"
           className="underline-offset-2 hover:underline "
         >
-          <h2 className="w-full my-2 text-4xl font-bold text-left sm:text-sm">{title}</h2>
+          <h2 className="w-full my-2 text-4xl font-bold text-left sm:text-sm">
+            {title}
+          </h2>
         </Link>
 
         <p className="my-2 font-medium sm:text-sm">{summary}</p>
@@ -73,9 +74,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 const Project = ({ title, type, img, link, github }) => {
   return (
     <article className="relative flex flex-col items-center justify-between w-full p-12 border border-solid shadow-2xl rounded-3xl border-dark dark:border-light dark:bg-dark bg-light rounded-br-2xl xs:p-4">
-
       <div className="absolute top-0 -right-2 shadow-xl -z-10 w-[101%] h-[102%] rounded-[2.2rem] bg-dark dark:bg-light rounded-br-3xl md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
-      
+
       <Link
         className="w-full overflow-hidden rounded-lg cursor-pointer dark:text-light"
         href={link}
@@ -101,7 +101,9 @@ const Project = ({ title, type, img, link, github }) => {
           target="_blank"
           className="underline-offset-2 hover:underline"
         >
-          <h2 className="w-full my-2 text-4xl font-bold text-left sm:text-base">{title}</h2>
+          <h2 className="w-full my-2 text-4xl font-bold text-left sm:text-base">
+            {title}
+          </h2>
         </Link>
 
         <div className="flex items-center justify-between w-full mt-2">
@@ -132,7 +134,10 @@ const Projects = () => {
       <TransitionEffect />
       <main className="flex flex-col items-center justify-center w-full mb-16 dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText text="Projetos" className="mb-16 text-7xl lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl" />
+          <AnimatedText
+            text="Projetos"
+            className="mb-16 text-7xl lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+          />
 
           <div className="grid grid-cols-12 gap-24 gap-y-32 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">

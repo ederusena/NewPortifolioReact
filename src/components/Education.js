@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
 import { motion, useScroll } from 'framer-motion'
+import PropTypes from 'prop-types'
+import React, { useEffect, useRef, useState } from 'react'
 import LiIcon from './LiIcon'
 
 const Details = ({ type, time, place, info }) => {
