@@ -62,10 +62,10 @@ const About = () => {
                 Biografia
               </h2>
               <p className="font-medium text-dark dark:text-light">
-                - Hello there! I'm Eder, a skilled web developer driven by a love for crafting visually stunning, practical, and user-focused digital journeys. Armed with four years of hands-on experience in the field, I'm constantly exploring fresh and inventive approaches to transform my clients' ideas into vibrant realities.
+                - Hello there! Im Eder, a skilled web developer driven by a love for crafting visually stunning, practical, and user-focused digital journeys. Armed with four years of hands-on experience in the field, Im constantly exploring fresh and inventive approaches to transform my clients' ideas into vibrant realities.
               </p>
               <p className="my-4 font-medium text-dark dark:text-light">
-                - I hold the belief that design extends beyond mere aesthetics; it's a problem-solving endeavor aimed at crafting intuitive and delightful user experiences.
+                - I hold the belief that design extends beyond mere aesthetics; its a problem-solving endeavor aimed at crafting intuitive and delightful user experiences.
               </p>
 
               <p className="font-medium text-dark dark:text-light">
