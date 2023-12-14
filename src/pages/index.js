@@ -6,7 +6,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import ProfilePic from '../../public/images/profile/eder.png'
-import lightBulb from '../../public/images/svgs/buld.svg'
+import aiRobot from '../../public/images/svgs/buld.svg'
 import TransitionEffect from './../components/TransitionEffect'
 
 export default function Home() {
@@ -67,8 +67,8 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className="absolute inline-block w-24 right-8 bottom-8">
-          <Image src={lightBulb} alt="logo" className="w-full h-auto" />
+        <div className="lg:hidden absolute inline-block w-36 right-8 bottom-8">
+          <Image src={aiRobot} alt="logo" className="w-full h-auto" />
         </div>
       </main>
     </>

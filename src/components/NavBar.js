@@ -114,7 +114,7 @@ const NavBar = () => {
 
         <nav className="flex flex-wrap items-center justify-center">
           <motion.a
-            href="https://twitter.com/"
+            href="https://twitter.com/motokacachorrox"
             target={'_blank'}
             whileHover={{
               y: -5,
@@ -149,30 +149,7 @@ const NavBar = () => {
           >
             <LinkedInIcon />
           </motion.a>
-          <motion.a
-            href="https://br.pinterest.com/"
-            target={'_blank'}
-            whileHover={{
-              y: -5,
-              transition: { duration: 0.3 },
-            }}
-            className="w-6 mr-3"
-            rel="noreferrer"
-          >
-            <PinterestIcon />
-          </motion.a>
-          <motion.a
-            href="https://dribbble.com/tags/icons"
-            target={'_blank'}
-            whileHover={{
-              y: -5,
-              transition: { duration: 0.3 },
-            }}
-            className="w-6 mr-3"
-            rel="noreferrer"
-          >
-            <DribbbleIcon />
-          </motion.a>
+          
 
           <button
             type="button"
@@ -226,18 +203,7 @@ const NavBar = () => {
 
           {/* Mobile nav */}
           <nav className="flex flex-wrap items-center justify-center gap-2 sm:gap-1">
-            <motion.a
-              href="https://twitter.com/"
-              target={'_blank'}
-              whileHover={{
-                y: -5,
-                transition: { duration: 0.3 },
-              }}
-              className="w-8 p-1 rounded-full bg-light"
-              rel="noreferrer"
-            >
-              <TwitterIcon />
-            </motion.a>
+           
             <motion.a
               href="https://github.com/ederusena"
               target={'_blank'}
@@ -262,30 +228,7 @@ const NavBar = () => {
             >
               <LinkedInIcon />
             </motion.a>
-            <motion.a
-              href="https://br.pinterest.com/"
-              target={'_blank'}
-              whileHover={{
-                y: -5,
-                transition: { duration: 0.3 },
-              }}
-              className="w-8 p-1 rounded-full bg-light"
-              rel="noreferrer"
-            >
-              <PinterestIcon />
-            </motion.a>
-            <motion.a
-              href="https://dribbble.com/tags/icons"
-              target={'_blank'}
-              whileHover={{
-                y: -5,
-                transition: { duration: 0.3 },
-              }}
-              className="w-8 p-1 rounded-full bg-light"
-              rel="noreferrer"
-            >
-              <DribbbleIcon />
-            </motion.a>
+            
 
             <button
               type="button"
