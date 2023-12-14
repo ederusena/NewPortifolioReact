@@ -2,12 +2,9 @@ import AnimatedText from '@/components/AnimatedText'
 import { GithubIcon } from '@/components/Icons'
 import Layout from '@/components/Layout'
 import {
-  agencyImgProject,
-  cryptoImgProject,
-  devdreamingImgProject,
-  fashionImgProject,
-  nftImgProject,
-  portfolioImgProject,
+  amaiseducacaoProject,
+  proradisProject,
+  qualicorpProject,
 } from '@public/images/projects'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
@@ -55,9 +52,12 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
         <p className="my-2 font-medium sm:text-sm">{summary}</p>
         <div className="flex items-center mt-2">
-          <Link className="w-10" href={github} target="_blank">
-            <GithubIcon />
-          </Link>
+          {github && (
+            <Link className="w-10" href={github} target="_blank">
+              <GithubIcon />
+            </Link>
+          )}
+
           <Link
             className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
             href={link}
@@ -86,7 +86,7 @@ const Project = ({ title, type, img, link, github }) => {
           transition={{ duration: 0.5 }}
           src={img}
           alt={title}
-          className="w-full h-auto mb-4 rounded-2xl"
+          className="w-full h-[40vh] mb-4 rounded-2xl"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
@@ -115,9 +115,11 @@ const Project = ({ title, type, img, link, github }) => {
             Visitar
           </Link>
 
-          <Link className="w-10" href={github} target="_blank">
-            <GithubIcon />
-          </Link>
+          {github && (
+            <Link className="w-10" href={github} target="_blank">
+              <GithubIcon />
+            </Link>
+          )}
         </div>
       </div>
     </article>
@@ -142,61 +144,42 @@ const Projects = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                github="https://github.com/ederusena"
-                type="React"
-                title="Crypto Screener"
-                summary="Projeto desenvolvido com React, NextJS e TailwindCSS"
-                img={cryptoImgProject}
-                link="https://crypto-screener.vercel.app/"
+                type="Vue.Js"
+                title="Amais Educação"
+                summary="Projeto desenvolvido com Vue.Js, para a Amais Educação"
+                img={amaiseducacaoProject}
+                link="https://www.amaiseducacao.com.br/"
               />
             </div>
             <div className="col-span-6 lg:col-span-12">
               <Project
-                github="https://github.com/ederusena"
-                type="React"
-                title="Crypto Screener"
-                img={agencyImgProject}
-                link="https://crypto-screener.vercel.app/"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-12">
-              <Project
-                github="https://github.com/ederusena"
-                type="React"
-                title="Crypto Screener"
-                img={devdreamingImgProject}
-                link="https://crypto-screener.vercel.app/"
+                type="Vue.Js"
+                title="Solução inovadora para diagnósticos em saúde"
+                img={proradisProject}
+                link="https://proradis.com.br/"
               />
             </div>
 
-            <div className="col-span-12">Principais projetos</div>
+            <div className="col-span-6 lg:col-span-12">
+              <Project
+                type="React | Vue.Js"
+                title="Plataforma de benefícios para empresas"
+                img={qualicorpProject}
+                link="https://www.qualicorp.com.br/"
+              />
+            </div>
+
+            {/* <div className="col-span-12">Principais projetos</div>
+
             <div className="col-span-6 lg:col-span-12">
               <Project
                 github="https://github.com/ederusena"
                 type="React"
                 title="Crypto Screener"
-                img={fashionImgProject}
+                img={qualicorpProject}
                 link="https://crypto-screener.vercel.app/"
               />
-            </div>
-            <div className="col-span-6 lg:col-span-12">
-              <Project
-                github="https://github.com/ederusena"
-                type="React"
-                title="Crypto Screener"
-                img={nftImgProject}
-                link="https://crypto-screener.vercel.app/"
-              />
-            </div>
-            <div className="col-span-6 lg:col-span-12">
-              <Project
-                github="https://github.com/ederusena"
-                type="React"
-                title="Crypto Screener"
-                img={portfolioImgProject}
-                link="https://crypto-screener.vercel.app/"
-              />
-            </div>
+            </div> */}
           </div>
         </Layout>
       </main>

@@ -8,16 +8,7 @@ import PropTypes from 'prop-types'
 import React, { useRef } from 'react'
 import TransitionEffect from './../components/TransitionEffect'
 
-import {
-  formValidationImgArticle,
-  higherOrderImgArticle,
-  loadingScreenImgArticle,
-  modalImgArticle,
-  paginationImgArticle,
-  reduxImgArticle,
-  smoothScrollImgArticle,
-  todolistImgArticle,
-} from '@public/images/articles'
+import { constructionImgArticle } from '@public/images/articles'
 
 const FramerImage = motion(Image)
 
@@ -126,8 +117,17 @@ const articles = () => {
             text="Palavras podem mudar o mundo!"
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <ul className="grid grid-cols-2 gap-16 md:grid-cols-1 md:gap-y-16">
-            <FeaturedArticle
+          {/* <ul className="grid grid-cols-2 gap-16 md:grid-cols-1 md:gap-y-16"> */}
+          <ul className="flex justify-center flex-col items-center">
+            <h1 className="mb-16 text-2xl sm:mb-8 sm:!text-2xl xs:!text-2xl">
+              A página de artigos está em construção!
+            </h1>
+            <Image
+              src={constructionImgArticle}
+              alt="Em construção"
+              className="self-center rounded-lg"
+            />
+            {/* <FeaturedArticle
               title="Build A Custom Pagination Component In Reactjs From Scratch"
               summary="Learn how to build a custom pagination component in ReactJS from scratch.
 Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
@@ -188,7 +188,7 @@ Improve the user experience."
               date="May 2021"
               link="https://blog.logrocket.com/how-to-use-redux-in-reactjs-with-examples/"
               img={reduxImgArticle}
-            />
+            /> */}
           </ul>
         </Layout>
       </main>

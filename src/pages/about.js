@@ -62,24 +62,14 @@ const About = () => {
                 Biografia
               </h2>
               <p className="font-medium text-dark dark:text-light">
-                - Hi, Im CodeBucks, a web developer and UI/UX designer with a
-                passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
-                am always looking for new and innovative ways to bring my
-                clients visions to life.
+                - Hello there! I'm Eder, a skilled web developer driven by a love for crafting visually stunning, practical, and user-focused digital journeys. Armed with four years of hands-on experience in the field, I'm constantly exploring fresh and inventive approaches to transform my clients' ideas into vibrant realities.
               </p>
               <p className="my-4 font-medium text-dark dark:text-light">
-                - I believe that design is about more than just making things
-                look pretty – its about solving problems and creating intuitive,
-                enjoyable experiences for users.
+                - I hold the belief that design extends beyond mere aesthetics; it's a problem-solving endeavor aimed at crafting intuitive and delightful user experiences.
               </p>
 
               <p className="font-medium text-dark dark:text-light">
-                - Whether Im working on a website, mobile app, or other digital
-                product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                - Be it a website, mobile app, or any digital product, I consistently uphold a dedication to design excellence and user-centric principles in every project I undertake. I eagerly anticipate the chance to contribute my skills and enthusiasm to your upcoming endeavor.
               </p>
             </div>
 

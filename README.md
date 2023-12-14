@@ -29,4 +29,6 @@ Access my Portfolio: <br />
 - [framer-motion](https://www.framer.com/motion/) <br />
 - [Tailwind css](https://tailwindcss.com/) <br />
 
-
+### For lint and code quality we used Biomjs
+- [biomejs](https://biomejs.dev/) <br />
+![biomejs](/screenshots/biome.png)
